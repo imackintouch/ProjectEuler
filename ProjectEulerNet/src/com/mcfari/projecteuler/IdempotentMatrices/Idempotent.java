@@ -11,7 +11,12 @@ public class Idempotent {
 		//https://www.mathsisfun.com/algebra/matrix-multiplying.html &
 		//https://en.wikipedia.org/wiki/Matrix_multiplication
 		
-		//Matrix B = new Matrix(A.getRowSize(), A.getRowSize(), "B");
+		/*
+		 * Note: For sizable n's e.g. 100 or 200, this will run for a long time. 
+		 * Some number theory knowledge might be required to make this faster.
+		 * In addition, the Matrix class is not as needed in this latest iteration since
+		 * matrix multiplication can be done independently of a matrix.
+		 */
 		if (A.getRowSize() != 3) {
 			System.out.println("Only 3 by 3 matrices will be allowed in this method!");
 			return -1;
@@ -59,7 +64,7 @@ public class Idempotent {
 											
 											countIndempotent++;
 											//System.out.printf("\nFound an indempotent matrix at iteration:%f \n",Math.floor(iteration));
-											System.out.println("\nFound an indempotent matrix. (See below):");
+											System.out.println("\nFound an idempotent matrix. (See below):");
 											
 											A.setElement(0, 0, a);	A.setElement(0, 1, b);	A.setElement(0, 2, c);	
 											A.setElement(1, 0, d);	A.setElement(1, 1, e);	A.setElement(1, 2, f);	
