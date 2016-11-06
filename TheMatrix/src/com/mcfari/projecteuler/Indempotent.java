@@ -5,7 +5,7 @@ public class Indempotent {
 	public static int calcIndempotent(Matrix A,int n) {
 	
 		//generate all possible 3*3 matrices where each element can only be -1,0 or 1. Square those matrices
-		//and see if the square matches the values of the original matrix.
+		//and then see if the square matches the values of the original matrix.
 		//See original problem description @ https://projecteuler.net/problem=572	
 		
 		Matrix B = new Matrix(A.getRowSize(), A.getRowSize(), "B");
